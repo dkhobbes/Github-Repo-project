@@ -34,13 +34,13 @@ class InputComponent extends React.Component {
     console.log('render', this.state);
 
     return <div className="search-bar">
-    <input onKeyUp={(evt) => { this.keyUpHappening(evt); }} ref={(input) => { this.myInput = input; }} />
+    <input placeholder="search for users" onKeyUp={(evt) => { this.keyUpHappening(evt); }} ref={(input) => { this.myInput = input; }} />
     <h2 id="site-info">Read More about github developer changes</h2>
     <iframe src="https://developer.github.com/changes/"></iframe>
     <ul className="results">
       {this.state.apiResult.items.map((info) => {return <li className="box" key={info.id}>
         <div className="name-api">{info.login}</div>
-        <div className="login-api"><a target="_blank" href={info.html_url}>{info.html_url}</a></div>
+        <div className="login-api" title={info.html_url}><a target="_blank" href={info.html_url}>{info.html_url}</a></div>
       </li>; })}
     </ul>
 

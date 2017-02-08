@@ -54,7 +54,7 @@ window.SW = window.SW || {};
         return React.createElement(
           'div',
           { className: 'search-bar' },
-          React.createElement('input', { onKeyUp: function onKeyUp(evt) {
+          React.createElement('input', { placeholder: 'search for users', onKeyUp: function onKeyUp(evt) {
               _this3.keyUpHappening(evt);
             }, ref: function ref(input) {
               _this3.myInput = input;
@@ -79,7 +79,7 @@ window.SW = window.SW || {};
                 ),
                 React.createElement(
                   'div',
-                  { className: 'login-api' },
+                  { className: 'login-api', title: info.html_url },
                   React.createElement(
                     'a',
                     { target: '_blank', href: info.html_url },

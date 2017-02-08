@@ -35,6 +35,7 @@ class InputComponent extends React.Component {
 
     return <div className="search-bar">
     <input onKeyUp={(evt) => { this.keyUpHappening(evt); }} ref={(input) => { this.myInput = input; }} />
+    <h2 id="site-info">Read More about github developer changes</h2>
     <iframe src="https://developer.github.com/changes/"></iframe>
     <ul className="results">
       {this.state.apiResult.items.map((info) => {return <li className="box" key={info.id}>

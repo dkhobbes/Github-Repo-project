@@ -59,6 +59,11 @@ window.SW = window.SW || {};
             }, ref: function ref(input) {
               _this3.myInput = input;
             } }),
+          React.createElement(
+            'h2',
+            { id: 'site-info' },
+            'Read More about github developer changes'
+          ),
           React.createElement('iframe', { src: 'https://developer.github.com/changes/' }),
           React.createElement(
             'ul',
